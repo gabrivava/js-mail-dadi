@@ -17,3 +17,22 @@ for (var i = 0; i < 5; i++) {
         break;
     }
 }
+
+/* Gioco dei dadi
+
+Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.
+Prima di partire a scrivere codice poniamoci qualche domanda: Che ci sia un array da qualche parte? Se dobbiamo confrontare qualcosa che "cosa" ci serve? */
+
+var numeroUtente = Math.floor(Math.random() * 6) + 1;
+var numeroComputer = Math.floor(Math.random() * 6) + 1;
+document.getElementById('numero_utente').innerHTML = numeroUtente;
+document.getElementById('numero_computer').innerHTML = numeroComputer;
+
+//confronto numeri
+if (numeroUtente > numeroComputer) {
+    document.getElementById('vincitore').innerHTML = "ha vinto l utente";
+} else if (numeroComputer > numeroUtente) {
+    document.getElementById('vincitore').innerHTML = "ha vinto il computer";
+} else {
+    document.getElementById('vincitore').innerHTML = "che coincidenza, uno stallo."
+}
